@@ -21,9 +21,9 @@ public class BookmarkDataInitializer {
 
             Instant now = Instant.now();
             repository.saveAll(List.of(
-                    create("JetBrains Blog", "https://blog.jetbrains.com", now),
-                    create("Spring Initializr", "https://start.spring.io", now),
-                    create("Spring Docs", "https://docs.spring.io", now)
+                    create("film 1", "https://blog.jetbrains.com", now),
+                    create("film 2", "https://start.spring.io", now),
+                    create("film 3", "https://docs.spring.io", now)
             ));
         };
     }
