@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="780ee14e-b168-4385-ae92-cc769337dffb" name="Changes" comment="" />
+    <list default="true" id="780ee14e-b168-4385-ae92-cc769337dffb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/Service/film.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/mcp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.config.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.routes.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/BookmarkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/main.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.spec.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,24 +79,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mathis/IdeaProjects/Prune1/src/main/java/com/example/prune1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Mathis/IdeaProjects/Prune1/src/main/java/com/example/prune1",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mathis\IdeaProjects\Prune1\src\main\java\com\example\prune1" />
