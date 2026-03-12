@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
 import { FilmList } from './film-list/film-list';
-import { film-detail } from './film-detail/film-detail';
+import { FilmDetail } from './film-detail/film-detail';
+import { LoginComponent } from './login/login';
+import { authGuard } from './guard/auth.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/films', pathMatch: 'full' },
-  { path: 'films', component: FilmList }
-  { path: 'films/:id', component: fim-detail }
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'films', component: FilmList, canActivate: [authGuard] },
+  { path: 'films/:id', component: FilmDetail, canActivate: [authGuard] }
 ];
+
+

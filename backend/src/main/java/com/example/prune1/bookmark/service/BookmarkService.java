@@ -39,7 +39,12 @@ public class BookmarkService {
         Instant now = Instant.now();
         Bookmark bookmark = new Bookmark();
         bookmark.setTitle(request.title().trim());
-        bookmark.setUrl(request.url().trim());
+        bookmark.setUrl(request.url() != null ? request.url().trim() : null);
+        bookmark.setDescription(request.description());
+        bookmark.setGenre(request.genre());
+        bookmark.setPosterUrl(request.posterUrl());
+        bookmark.setYear(request.year());
+        bookmark.setRating(request.rating());
         bookmark.setCreatedAt(now);
         bookmark.setUpdatedAt(now);
         return BookmarkResponse.from(bookmarkRepository.save(bookmark));
@@ -48,7 +53,12 @@ public class BookmarkService {
     public BookmarkResponse update(Long id, UpdateBookmarkRequest request) {
         Bookmark bookmark = getBookmark(id);
         bookmark.setTitle(request.title().trim());
-        bookmark.setUrl(request.url().trim());
+        bookmark.setUrl(request.url() != null ? request.url().trim() : null);
+        bookmark.setDescription(request.description());
+        bookmark.setGenre(request.genre());
+        bookmark.setPosterUrl(request.posterUrl());
+        bookmark.setYear(request.year());
+        bookmark.setRating(request.rating());
         bookmark.setUpdatedAt(Instant.now());
         return BookmarkResponse.from(bookmarkRepository.save(bookmark));
     }

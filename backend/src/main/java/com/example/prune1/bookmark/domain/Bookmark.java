@@ -24,6 +24,19 @@ public class Bookmark {
     @Column(nullable = false, length = 2048)
     private String url;
 
+    @Column(length = 1000)
+    private String description;
+
+    @Column(length = 80)
+    private String genre;
+
+    @Column(length = 2048)
+    private String posterUrl;
+
+    private Integer year;
+
+    private Double rating;
+
     @Column(nullable = false, updatable = false)
     private Instant createdAt;
 
@@ -48,6 +61,46 @@ public class Bookmark {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 
     public Instant getCreatedAt() {

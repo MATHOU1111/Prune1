@@ -4,6 +4,7 @@ import com.example.prune1.bookmark.domain.BookmarkNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -20,13 +21,21 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiError> handleNotFound(BookmarkNotFoundException ex, HttpServletRequest request) {
         HttpStatus status = HttpStatus.NOT_FOUND;
         return ResponseEntity.status(status)
-                .body(new ApiError(
-                        Instant.now(),
-                        status.value(),
-                        status.getReasonPhrase(),
-                        ex.getMessage(),
-                        request.getRequestURI()
-                ));
+                .body(new ApiError(Instant.now(), status.value(), status.getReasonPhrase(), ex.getMessage(), request.getRequestURI()));
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ApiError> handleIllegalArgument(IllegalArgumentException ex, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.CONFLICT;
+        return ResponseEntity.status(status)
+                .body(new ApiError(Instant.now(), status.value(), status.getReasonPhrase(), ex.getMessage(), request.getRequestURI()));
+    }
+
+    @ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<ApiError> handleBadCredentials(BadCredentialsException ex, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.UNAUTHORIZED;
+        return ResponseEntity.status(status)
+                .body(new ApiError(Instant.now(), status.value(), status.getReasonPhrase(), "Identifiants incorrects.", request.getRequestURI()));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -41,7 +50,7 @@ public class GlobalExceptionHandler {
                         error -> error.getDefaultMessage() != null ? error.getDefaultMessage() : "Valeur invalide",
                         (left, right) -> left
                 ));
-
         return ResponseEntity.badRequest().body(errors);
     }
+
 }

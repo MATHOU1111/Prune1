@@ -9,6 +9,11 @@ public record BookmarkResponse(
         Long id,
         String title,
         String url,
+        String description,
+        String genre,
+        String posterUrl,
+        Integer year,
+        Double rating,
         Instant createdAt,
         Instant updatedAt
 ) {
@@ -17,6 +22,11 @@ public record BookmarkResponse(
                 bookmark.getId(),
                 bookmark.getTitle(),
                 bookmark.getUrl(),
+                bookmark.getDescription(),
+                bookmark.getGenre(),
+                bookmark.getPosterUrl(),
+                bookmark.getYear(),
+                bookmark.getRating(),
                 bookmark.getCreatedAt(),
                 bookmark.getUpdatedAt()
         );

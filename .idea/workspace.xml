@@ -5,36 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="780ee14e-b168-4385-ae92-cc769337dffb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/Service/film.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/api/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/api/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/api/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/domain/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/infra/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/security/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/service/AppUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/auth/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/Service/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/guard/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/interceptor/auth.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/login/login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/login/login.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/mcp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.config.server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.routes.server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/BookmarkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/app/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/main.server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/src/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Prune/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/BookmarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/BookmarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/CreateBookmarkRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/CreateBookmarkRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/UpdateBookmarkRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/api/UpdateBookmarkRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/domain/Bookmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/domain/Bookmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/infra/BookmarkDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/infra/BookmarkDataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/service/BookmarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/bookmark/service/BookmarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/prune1/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Service/film.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Service/film.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.routes.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-detail/film-detail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/film-list/film-list.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,40 +88,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Mathis/IdeaProjects/Prune1/src/main/java/com/example/prune1",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mathis/IdeaProjects/Prune1/src/main/java/com/example/prune1&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mathis\IdeaProjects\Prune1\src\main\java\com\example\prune1" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

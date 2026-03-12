@@ -1,0 +1,54 @@
+.detail-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #6c63ff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+
+  &:hover { text-decoration: underline; }
+}
+
+.state-msg {
+  text-align: center;
+  color: #666;
+  padding: 2rem 0;
+  &.error { color: #e74c3c; }
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+
+  h1 {
+    margin: 0 0 0.8rem;
+    font-size: 1.6rem;
+    color: #1a1a2e;
+  }
+
+  .url {
+    color: #6c63ff;
+    word-break: break-all;
+    font-size: 0.9rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    color: #999;
+  }
+}
+

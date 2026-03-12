@@ -9,6 +9,11 @@ public record UpdateBookmarkRequest(
         String title,
         @NotBlank(message = "L'URL est obligatoire")
         @URL(message = "L'URL doit etre valide")
-        String url
+        String url,
+        String description,
+        String genre,
+        String posterUrl,
+        Integer year,
+        Double rating
 ) {
 }
