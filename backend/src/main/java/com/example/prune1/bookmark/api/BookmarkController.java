@@ -3,6 +3,7 @@ package com.example.prune1.bookmark.api;
 
 import com.example.prune1.bookmark.service.BookmarkService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,13 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/bookmarks")
+@RequiredArgsConstructor
 public class BookmarkController {
 
     private final BookmarkService bookmarkService;
-
-    public BookmarkController(BookmarkService bookmarkService) {
-        this.bookmarkService = bookmarkService;
-    }
 
     @GetMapping
     public ResponseEntity<List<BookmarkResponse>> getAllBookmarks() {
@@ -48,4 +46,3 @@ public class BookmarkController {
         return ResponseEntity.noContent().build();
     }
 }
-

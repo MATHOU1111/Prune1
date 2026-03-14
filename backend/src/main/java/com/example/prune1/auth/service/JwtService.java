@@ -1,3 +1,4 @@
+// Role: centralise la creation et la verification des JWT.
 package com.example.prune1.auth.service;
 
 import io.jsonwebtoken.Claims;
@@ -19,10 +20,12 @@ public class JwtService {
     @Value("${app.jwt.expiration-ms}")
     private long expirationMs;
 
+    // Construit la cle HMAC a partir du secret configure dans application.properties.
     private SecretKey key() {
         return Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
 
+    // Cree un token signe contenant le username dans le claim subject.
     public String generateToken(String username) {
         return Jwts.builder()
                 .subject(username)
@@ -36,6 +39,7 @@ public class JwtService {
         return parseClaims(token).getSubject();
     }
 
+    // Retourne false pour tout token invalide, expire ou mal signe.
     public boolean isTokenValid(String token, String username) {
         try {
             return extractUsername(token).equals(username) && !isExpired(token);
@@ -48,6 +52,7 @@ public class JwtService {
         return parseClaims(token).getExpiration().before(new Date());
     }
 
+    // Parse et verifie la signature du token avant de retourner ses claims.
     private Claims parseClaims(String token) {
         return Jwts.parser()
                 .verifyWith(key())
@@ -56,4 +61,3 @@ public class JwtService {
                 .getPayload();
     }
 }
-

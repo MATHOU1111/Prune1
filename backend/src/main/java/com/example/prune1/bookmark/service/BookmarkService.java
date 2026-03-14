@@ -7,6 +7,7 @@ import com.example.prune1.bookmark.api.UpdateBookmarkRequest;
 import com.example.prune1.bookmark.domain.Bookmark;
 import com.example.prune1.bookmark.domain.BookmarkNotFoundException;
 import com.example.prune1.bookmark.infra.BookmarkRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,13 +16,10 @@ import java.util.List;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class BookmarkService {
 
     private final BookmarkRepository bookmarkRepository;
-
-    public BookmarkService(BookmarkRepository bookmarkRepository) {
-        this.bookmarkRepository = bookmarkRepository;
-    }
 
     @Transactional(readOnly = true)
     public List<BookmarkResponse> findAll() {

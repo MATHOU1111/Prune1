@@ -1,3 +1,4 @@
+// Role: configure les regles de securite HTTP, l'auth provider et CORS.
 package com.example.prune1.auth.security;
 
 import com.example.prune1.auth.service.AppUserDetailsService;
@@ -33,6 +34,7 @@ public class SecurityConfig {
         this.userDetailsService = userDetailsService;
     }
 
+    // Defini la chaine de filtres: API auth publique, reste protege par JWT stateless.
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -49,6 +51,7 @@ public class SecurityConfig {
         return http.build();
     }
 
+    // Autorise l'application Angular locale a appeler l'API en developpement.
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
@@ -56,11 +59,13 @@ public class SecurityConfig {
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;
     }
 
+    // Configure l'authentification username/password via AppUserDetailsService + BCrypt.
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider(userDetailsService);
@@ -78,4 +83,3 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-
