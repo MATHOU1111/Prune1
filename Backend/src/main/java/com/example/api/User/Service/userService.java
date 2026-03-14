@@ -19,4 +19,10 @@ public class UserService {
     public User getUserById(String id) {
         return userRepository.findById(new ObjectId(id)).orElse(null);
     }
+
+    public User createUser(CreateUserRequest request) {
+        User user = new User();
+        user.setName(request.name().trim());
+        return userRepository.save(user);
+    }
 }

@@ -6,12 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/test")
     public String test() {
@@ -27,9 +31,6 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @Autowired
-    private UserService userService;
-
     @GetMapping
     public ResponseEntity<?> getAll() {
         List<User> users = userService.getAllUsers();
@@ -37,5 +38,11 @@ public class UserController {
             return ResponseEntity.status(404).body("Erreur requête (getusersall)");
         }
         return ResponseEntity.ok(users);
+    }
+
+    @PostMapping
+    public ResponseEntity<User> createUser(@RequestBody CreateUserRequest request){
+        User created = userService.createUser(request);
+        return ResponseEntity.status(201).body(created);
     }
 }
