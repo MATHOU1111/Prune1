@@ -10,12 +10,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Document(collection = "Users")
 public class User {
 
     @Id
     private ObjectId id;
 
-    private String name;
-
+    private String username;
+    private String password;
+    private String role;
 }

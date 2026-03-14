@@ -45,4 +45,22 @@ public class UserController {
         User created = userService.createUser(request);
         return ResponseEntity.status(201).body(created);
     }
+
+    @PutMapping
+    public ResponseEntity<?> updateUser(@RequestBody User user) {
+        User updated = userService.updateUser(user);
+        if (updated == null) {
+            return ResponseEntity.status(404).body("L'id indiqué est incorrect");
+        }
+        return ResponseEntity.ok(updated);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable String id){
+        User userTodelete = userService.DeleteUserById(id);
+        if(userTodelete == null){
+            return ResponseEntity.status(404).body("L'id indiqué est incorrect");
+        }
+        return ResponseEntity.ok(userTodelete);
+        }
 }
