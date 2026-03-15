@@ -1,12 +1,18 @@
-package com.example.api.user;
+package com.example.api.User.Controller;
 
+import com.example.api.User.Api.CreateUserRequest;
+import com.example.api.User.Model.User;
+import com.example.api.User.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,7 +47,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody CreateUserRequest request){
+    public ResponseEntity<User> createUser(@RequestBody CreateUserRequest request) {
         User created = userService.createUser(request);
         return ResponseEntity.status(201).body(created);
     }
@@ -56,11 +62,11 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable String id){
+    public ResponseEntity<?> deleteUser(@PathVariable String id) {
         User userTodelete = userService.DeleteUserById(id);
-        if(userTodelete == null){
+        if (userTodelete == null) {
             return ResponseEntity.status(404).body("L'id indiqué est incorrect");
         }
         return ResponseEntity.ok(userTodelete);
-        }
+    }
 }

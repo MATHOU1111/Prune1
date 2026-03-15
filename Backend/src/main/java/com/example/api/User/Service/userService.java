@@ -1,5 +1,8 @@
-package com.example.api.user;
+package com.example.api.User.Service;
 
+import com.example.api.User.Api.CreateUserRequest;
+import com.example.api.User.Model.User;
+import com.example.api.User.Repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,23 +20,24 @@ public class UserService {
     }
 
     public User getUserById(String id) {
-        return userRepository.findById(new ObjectId(id)).orElse(null);
+        try {
+            return userRepository.findById(new ObjectId(id)).orElse(null);
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
     }
 
     public User getUserByUsername(String username) {
         User user = userRepository.findByUsername(username).orElse(null);
-        if(!user || user == null){
-            throw new UsernameNotFoundException("User not found with username " + username);
+        if (user == null) {
+            throw new Error("User not found with username " + username);
         }
-        else{
-            return new
-        }
-
+        return user;
     }
 
     public User createUser(CreateUserRequest request) {
         User user = new User();
-        user.setUsername(request.username().trim());
+        user.setUsername(request.name() == null ? null : request.name().trim());
         return userRepository.save(user);
     }
 
