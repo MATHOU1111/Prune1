@@ -1,5 +1,6 @@
 package com.example.api.User.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    private ObjectId id;
+    @JsonProperty("_id")
+    private String id;
     private String username;
     private String password;
     private String role;

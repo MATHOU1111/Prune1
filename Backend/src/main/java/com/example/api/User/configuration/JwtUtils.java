@@ -65,6 +65,8 @@ public class JwtUtils {
     }
 
     private Claims extractAllClaims(String token) {
+        System.out.println("=== Token passé à parseClaimsJws ===");
+        System.out.println(token);
         return Jwts.parser()
                 .setSigningKey(getSignKey())
                 .parseClaimsJws(token)

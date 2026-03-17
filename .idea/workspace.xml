@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="780ee14e-b168-4385-ae92-cc769337dffb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Controller/RegistrationLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Service/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Api/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Api/CreateUserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Service/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/Service/userService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/configuration/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/configuration/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/filter/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/filter/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/api/User/configuration/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +23,9 @@
       <entry key="_C:/Users/Mathis/IdeaProjects/Prune1" value="3AhfXsvGndaBcaCo6SKOLDdJi7P" />
       <entry key="_C:/Users/Mathis/IdeaProjects/Prune1/Backend" value="3Az23b0Gn9Cyk0To9oA1TriGgmJ" />
     </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
@@ -100,6 +93,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mathis/IdeaProjects/Prune1/src/main/java/com/example/prune1",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -156,7 +150,10 @@
       <updated>1773049765390</updated>
       <workItem from="1773574408566" duration="23000" />
       <workItem from="1773574661523" duration="3292000" />
-      <workItem from="1773580878987" duration="5425000" />
+      <workItem from="1773580878987" duration="5960000" />
+      <workItem from="1773596728295" duration="954000" />
+      <workItem from="1773763795913" duration="36000" />
+      <workItem from="1773763844062" duration="4508000" />
     </task>
     <servers />
   </component>

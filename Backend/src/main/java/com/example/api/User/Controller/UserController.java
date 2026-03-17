@@ -1,5 +1,7 @@
 package com.example.api.User.Controller;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import com.example.api.User.Api.CreateUserRequest;
 import com.example.api.User.Model.User;
 import com.example.api.User.Service.UserService;
@@ -16,12 +18,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/users")
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private  final UserService userService;
+
+
 
     @GetMapping("/test")
     public String test() {
@@ -52,7 +57,7 @@ public class UserController {
         return ResponseEntity.status(201).body(created);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<?> updateUser(@RequestBody User user) {
         User updated = userService.updateUser(user);
         if (updated == null) {
@@ -61,12 +66,14 @@ public class UserController {
         return ResponseEntity.ok(updated);
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) {
-        User userTodelete = userService.DeleteUserById(id);
+        User userTodelete = userService.deleteUserById(id);
         if (userTodelete == null) {
             return ResponseEntity.status(404).body("L'id indiqué est incorrect");
         }
+        log.info("Suppression de l'utilisateur : Username={}, ID={}", userTodelete.getUsername(), id);
         return ResponseEntity.ok(userTodelete);
     }
 }

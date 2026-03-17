@@ -3,7 +3,6 @@ package com.example.api.User.Service;
 import com.example.api.User.Api.CreateUserRequest;
 import com.example.api.User.Model.User;
 import com.example.api.User.Repository.UserRepository;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,11 +19,7 @@ public class UserService {
     }
 
     public User getUserById(String id) {
-        try {
-            return userRepository.findById(new ObjectId(id)).orElse(null);
-        } catch (IllegalArgumentException e) {
-            return null;
-        }
+        return userRepository.findById(id).orElse(null);
     }
 
     public User getUserByUsername(String username) {
@@ -48,7 +43,7 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User DeleteUserById(String id) {
+    public User deleteUserById(String id) {
         User user = getUserById(id);
         if (user == null) {
             return null;
