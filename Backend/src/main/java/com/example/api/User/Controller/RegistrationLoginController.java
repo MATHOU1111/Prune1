@@ -4,6 +4,7 @@ import com.example.api.User.Model.User;
 import com.example.api.User.Repository.UserRepository;
 import com.example.api.User.configuration.JwtUtils;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,6 +22,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
+@Slf4j
 public class RegistrationLoginController {
 
     private final UserRepository userRepository;
@@ -34,6 +36,7 @@ public class RegistrationLoginController {
             return ResponseEntity.status(400).body("Username already exists");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        log.info("Creation de compte validée pour {}", user.getUsername());
         return ResponseEntity.ok(userRepository.save(user));
     }
 
@@ -47,6 +50,7 @@ public class RegistrationLoginController {
                 Map<String, Object> authData = new HashMap<>();
                 authData.put("token", jwtUtils.GenerateToken(user.getUsername()));
                 authData.put("type", "Bearer");
+                log.info("Connexion de : {}", user.getUsername());
                 return ResponseEntity.ok(authData);
             }
             return ResponseEntity.status(401).body("Invalid credentials");

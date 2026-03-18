@@ -26,8 +26,6 @@ public class UserController {
 
     private  final UserService userService;
 
-
-
     @GetMapping("/test")
     public String test() {
         return "Le backend fonctionne !";
@@ -39,6 +37,7 @@ public class UserController {
         if (user == null) {
             return ResponseEntity.status(404).body("L'id indiqué est incorrecte");
         }
+        log.info("utilisateur retourné : {}", user);
         return ResponseEntity.ok(user);
     }
 
@@ -48,6 +47,7 @@ public class UserController {
         if (users == null || users.isEmpty()) {
             return ResponseEntity.status(404).body("Erreur requête (getusersall)");
         }
+        log.info("Liste des users : {}", users);
         return ResponseEntity.ok(users);
     }
 
@@ -63,6 +63,7 @@ public class UserController {
         if (updated == null) {
             return ResponseEntity.status(404).body("L'id indiqué est incorrect");
         }
+        log.info("Modification : {}", updated.getUsername());
         return ResponseEntity.ok(updated);
     }
 
